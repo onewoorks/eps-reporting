@@ -108,7 +108,6 @@ export default {
     };
   },
   mounted: function() {
-      console.log(sessionStorage)
     this.loadLatest();
   },
   methods: {
@@ -140,7 +139,8 @@ export default {
     loadLatest: function() {
       Axios.get(process.env.SPE_API + "info/", {
         headers: {
-          token: sessionStorage.token
+          token: sessionStorage.token,
+          'Access-Control-Allow-Headers':'application/json'
         }
       }).then(response => {
         let resp = response.data.response;

@@ -117,7 +117,7 @@ export default {
       this.tarikh = value.clean;
       Axios.get(
         process.env.SPE_API +
-          "jualan/jualan?dari=" +
+          "jualan/jualan?tag="+sessionStorage.tag+"&dari=" +
           tarikh.mula +
           "&hingga=" +
           tarikh.akhir,

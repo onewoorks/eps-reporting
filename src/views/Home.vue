@@ -25,6 +25,7 @@ export default {
       obj[v[0]] = v[1];
     });
     sessionStorage.token = obj.t
+    sessionStorage.tag = obj.s
   },
   methods: {}
 };
